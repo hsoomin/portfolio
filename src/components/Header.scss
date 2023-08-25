@@ -1,0 +1,15 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    h1{}
+    ul{
+        display: flex;
+        li{
+            a{margin-right: 4rem;}
+        }
+    }
+}

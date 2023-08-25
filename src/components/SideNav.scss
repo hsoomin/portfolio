@@ -1,0 +1,33 @@
+.sideNav{
+    ul{
+        position: fixed;
+        top: 35%;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        z-index: 100;
+        li{
+            width: 11px;
+            height: 11px;
+            position: relative;
+            border: 1px solid #fff;
+            left: 50%;
+            top: 50%;
+            border-radius: 50%;
+            &.active {
+                background: #fff; //적용 안됨
+            }
+            a{
+                position: absolute;
+                left: 20px;
+                top: -5px;
+                cursor: pointer;
+                &.active{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
