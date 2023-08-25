@@ -10,7 +10,7 @@ const SideNav = () => {
         <div className='sideNav'>
             <ul>
                 <li>
-                    <Link to='section1' spy={true} smooth={true}> FRONT</Link>
+                    <Link to='section1' spy={true} smooth={true}> COVER</Link>
                 </li>
                 <li>
                     <Link to='section2' spy={true} smooth={true}>ABOUT</Link>

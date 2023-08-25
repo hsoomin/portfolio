@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Rampart+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+body{font-family: 'Yatra One', 'Nanum Myeongjo', serif;;}
 *{margin: 0;padding: 0;}
 ul,li{list-style: none;}
 a{text-decoration: none;}
@@ -24,50 +25,60 @@ a{text-decoration: none;}
     }
     //front
     .front{
-        background: lightblue;
+        background: #0D0D0D;
         width: 100%;
         height: 100vh;
-
-        color: #333; 
-        text-align: center; 
-        font-weight: bold; 
-        font-size: 50px; 
-        line-height: 969px;
+        position: relative;
+        .frame{
+            width: 25%;
+            height: 55%;
+            background: #fff;
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            .inner-box{
+                width: 86%;
+                height: 72%;
+                background: #313C50;
+                position: absolute;
+                top: 6%;
+                left: 7%;
+                p{color: mediumspringgreen;}
+            }
+            h1{
+                color: #B6B6B6;
+                font-size: 100px;
+                position: absolute;
+                bottom: 15%;
+                left: 51%;
+                font-style: italic;
+            }
+        }
     }
     //about
     .about{
-        background: teal;
+        background: #0D0D0D;
         width: 100%;
         height: 100vh;
 
-        color: #333; 
+        color: #fff; 
         text-align: center; 
-        font-weight: bold; 
         font-size: 50px; 
         line-height: 969px;
     }
     //project
     .project{
-        background: pink;
         width: 100%;
         height: 100vh;
-        ul{
-            li{
-                a{
-                    h2{}
-                }
-            }
-        }
     }
     //contact
     .contact{
-        background: cadetblue;
+        background: #0D0D0D;
         width: 100%;
         height: 100vh;
 
-        color: #333; 
+        color: #fff; 
         text-align: center; 
-        font-weight: bold; 
         font-size: 50px; 
         line-height: 969px;
     }
