@@ -1,3 +1,4 @@
+/* 왼쪽
 .sideNav{
     ul{
         position: fixed;
@@ -29,5 +30,31 @@
             }
         }
     }
+} */
+
+
+//top
+.sideNav{
+    ul{
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4rem;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        li{
+            a{
+                &.active{
+                    color: springgreen;
+                }
+            }
+        }
+    }
 }
+
 

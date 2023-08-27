@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const Cover = () => {
     return (
-        <div className='front' id='section1'>
+        <div className='Cover' id='section1'>
             <div className='frame'>
                 <div className="inner-box">
                     <p>사진</p>

@@ -1,7 +1,7 @@
 /*스크롤바 */
 ::-webkit-scrollbar{width: 7px;}
 ::-webkit-scrollbar-track{background: #fff}
-::-webkit-scrollbar-thumb{background:lemonchiffon; border-radius: 10px;}
+::-webkit-scrollbar-thumb{background:#00ff00; border-radius: 10px;}
 
 body {
   margin: 0;
