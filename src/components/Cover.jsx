@@ -1,15 +1,28 @@
-import { CgArrowDown } from "react-icons/cg"; 
+import { BiDownArrowAlt } from "react-icons/bi"; 
 import React from 'react';
-import { Link } from 'react-scroll';
+import { animateScroll as scroll } from 'react-scroll'; // react-scroll에서 필요한 부분 
+import 'animate.css';
 
 const Cover = () => {
+    
+    // 다음 섹션으로 스크롤 이동
+    const scrollToNextSection = () => {
+        scroll.scrollTo(window.innerHeight, { smooth: true, duration: 1000 }); 
+    };
+
     return (
         <div className='Cover' id='section1'>
             <div className='cover-container'>
-                <h1>PORTFOLIO</h1>
-                <h2>2023</h2>
-                <div className="arrow-down">
-                    <CgArrowDown />
+                <div className="title">
+                    <h1 className="animate__animated animate__fadeInDownBig">PORTFOLIO</h1>
+                </div>
+                <div className="year">
+                    <h2 className="animate__animated animate__fadeInRight animate__delay-1s">2023</h2>
+                </div>
+                <div className='cover-arrow'>
+                    <div className="arrow-down" onClick={scrollToNextSection}>
+                        <BiDownArrowAlt className="animate__animated animate__fadeInDownBig animate__delay-2s"/>
+                    </div>
                 </div>
             </div>
         </div>

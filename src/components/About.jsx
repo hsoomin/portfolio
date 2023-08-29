@@ -9,9 +9,9 @@ const About = () => {
                 <img src="" alt="" />사진
             </div>
             <div className='my-info'>
-                <h2>황수민</h2>
+                <h2>이름</h2>
                 <h3>010</h3>
-                <h3>wnghkdsns@</h3>
+                <h3>dsfsdf@</h3>
             </div>
             <ul className="my-introduce">
                 <li>EDUCATION.

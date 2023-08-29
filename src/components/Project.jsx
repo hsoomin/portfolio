@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Project.scss';
-import { BiRightArrowAlt, BiLeftArrowAlt, BiPlus } from "react-icons/bi";
+import { BiRightArrowAlt, BiLeftArrowAlt } from "react-icons/bi";
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import ProjectData from './ProjectData';
+import ProjectData from '../data/ProjectData';
 
 const Project2 = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,9 +32,9 @@ const Project2 = () => {
                             </div>
                             <div className="project-info">
                                 <h2>{project.projectName}</h2>
-                                <p>{project.projectDescript}</p>
+                                {/* <p>{project.projectDescript}</p> */}
                                 <button className="more-btn" onClick={() => goDetail(project.id)}>
-                                    더 알아보기 <BiPlus />
+                                    더 알아보기 +
                                 </button>
                             </div>
                         </div>

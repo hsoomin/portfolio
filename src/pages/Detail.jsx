@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
-import ProjectData from '../components/ProjectData';
+import ProjectData from '../data/ProjectData';
 import './Detail.scss'
 
 const Detail = () => {
