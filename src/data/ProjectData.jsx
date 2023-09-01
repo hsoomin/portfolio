@@ -30,14 +30,14 @@ const ProjectData = [
     {
         id:5,
         imgSrc: '/img/pro05.png',
-        projectName: '감정 일기장',
+        projectName: '소품샵',
         projectLink: '#',
         projectDescript: '설명~~~~~'
     },
     {
         id:6,
-        imgSrc: '/img/pro01.png',
-        projectName: '6',
+        imgSrc: '/img/pro06.png',
+        projectName: '감정 일기장',
         projectLink: '#',
         projectDescript: '설명~~~~~'
     },
