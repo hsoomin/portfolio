@@ -23,6 +23,9 @@ const About = () => {
                     <img width='50' src="/img/skills/html.svg" alt="" />
                 </li>
                 <li>Working Experience.</li>
+                <img src="/img/computer.svg" alt="" style={{width:500,height:500}}/>
+                <img src="/img/comp2.svg" alt="" style={{width:500,height:500}}/>
+                <img src="/img/comp3.svg" alt="" style={{width:500,height:500}}/>
             </ul>
         </div>
     );
