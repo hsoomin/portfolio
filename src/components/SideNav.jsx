@@ -4,8 +4,6 @@ import { Link } from 'react-scroll';
 
 const SideNav = () => {
     
-    //active
-    
     return (
         <div className='sideNav'>
             <ul>

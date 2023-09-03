@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ProjectData from '../data/ProjectData';
 
-const Project2 = () => {
+
+
+const Project = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
     
     const prevSlide = () => {
@@ -49,4 +51,8 @@ const Project2 = () => {
     );
 };
 
-export default Project2;
+export default Project;
+
+
+
+

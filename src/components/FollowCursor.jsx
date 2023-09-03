@@ -21,8 +21,8 @@ const FollowCursor = () => {
     const frame = () => {
         requestAnimationFrame(frame);
     
-        setStartX((prevStartX) => lerp(prevStartX, mouseX, 0.05));
-        setStartY((prevStartY) => lerp(prevStartY, mouseY, 0.05));
+        setStartX((prevStartX) => lerp(prevStartX, mouseX, 0.07));
+        setStartY((prevStartY) => lerp(prevStartY, mouseY, 0.07));
     };
     requestAnimationFrame(frame);
     window.addEventListener('mousemove', handleMouseMove);
