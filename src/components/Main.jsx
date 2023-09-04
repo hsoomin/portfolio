@@ -4,6 +4,7 @@ import Contact from './Contact';
 // import Project from './Project';  
 import Cover from './Cover';
 import Project2 from './Project2';  
+import About2 from './About2';
 
 const MainPage = () => {
     
@@ -11,6 +12,7 @@ const MainPage = () => {
         <div>
             <Cover />
             <About />
+            <About2 />
             {/* <Project /> */}
             <Project2 />
             <Contact />
