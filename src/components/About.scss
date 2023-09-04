@@ -3,12 +3,38 @@
     height: 100vh;
     padding: 3rem;
     box-sizing: border-box;
-    background: palegreen;
+    background: lavender;
     .container{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        background: pink;
-        h2{font-size: 50px;}
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top:  1px solid #000;
+        border-bottom:  1px solid #000;
+        gap: 2rem;
+
+        .about-item{
+            width: 33.333%;
+            height: 90%;
+            background: paleturquoise;
+            border:  1px solid #000;
+            display: flex;
+            flex-direction: column;
+            &:nth-child(1){}
+            &:nth-child(2){background: lemonchiffon;}
+            &:nth-child(3){background: mediumaquamarine;}
+            .about-contact{
+                align-items: flex-end;
+                background: mintcream;
+                margin-top: 637px; //위치 조정
+                padding: 2rem;
+                box-sizing: border-box;
+                p{
+                    text-align: right;
+                }
+            }
+        }
+
     }
 }

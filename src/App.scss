@@ -68,3 +68,18 @@ body{font-family: 'Poppins','Nanum Gothic Coding','Yatra One', 'Nanum Myeongjo',
         height: 100vh;
     }
 }
+
+
+/*light mode */
+.light {
+    background-color: white;
+    color: black;
+}
+
+/* Dark mode */
+.dark {
+    background-color: #282c34;  
+    color: white;
+    border: 1px solid #fefefe;
+}
+
