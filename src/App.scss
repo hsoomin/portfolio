@@ -36,9 +36,9 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;;}
     .Cover{
         width: 100%;
         height: 100vh;
+        position: relative;
         padding: 3rem;
         box-sizing: border-box;
-        position: relative;
         .cover-container{
             border-bottom: 1px solid #000;
             width: 100%;
