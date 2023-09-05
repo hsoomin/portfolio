@@ -1,10 +1,8 @@
 import React from 'react';
 import About from './About';
 import Contact from './Contact';
-// import Project from './Project';  
 import Cover from './Cover';
-import Project2 from './Project2';  
-import About2 from './About2';
+import Project from './Project';  
 
 const MainPage = () => {
     
@@ -12,9 +10,7 @@ const MainPage = () => {
         <div>
             <Cover />
             <About />
-            <About2 />
-            {/* <Project /> */}
-            <Project2 />
+            <Project />
             <Contact />
         </div>
     );

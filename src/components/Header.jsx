@@ -1,20 +1,29 @@
 import React from 'react';
-// import {Link,NavLink} from 'react-router-dom';
-// import './Header.scss'
+import { Link } from 'react-scroll';
 
-const Header = () => {
-
+const Header = ({ onToggleMode, isDarkMode }) => {
     
     return (
-        <header>
-            <h1>PORTFOLIO</h1>
+        <div className='Header'>
             <ul>
-                <li><a href='#'>ABOUT</a></li>
-                <li><a href='#'>PROJECT</a></li>
-                <li><a href='#'>CONTACT</a></li>
-            </ul>
-            
-        </header>
+                <li>
+                    <Link to='section1' spy={true} smooth={true}> HOME</Link>
+                </li>
+                <li>
+                    <Link to='section2' spy={true} smooth={true}>ABOUT</Link>
+                </li>
+                <li>
+                    <Link to='section3' spy={true} smooth={true}>PROJECT</Link>
+                </li>
+                <li>
+                    <Link to='section4' spy={true} smooth={true}>CONTACT</Link>
+                </li>            
+                {isDarkMode 
+                    ? (<li className='mode' onClick={onToggleMode}>🌞</li>) 
+                    : (<li className='mode' onClick={onToggleMode}>🌙</li>)
+                }
+            </ul> 
+        </div>
     );
 };
 

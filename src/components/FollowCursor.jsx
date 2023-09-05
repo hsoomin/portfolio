@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 
 const FollowCursor = () => {
+    //마우스의 현재 위치(mouseX, mouseY)
+    //시작 위치(startX, startY)
     const [mouseX, setMouseX] = useState(0);
     const [mouseY, setMouseY] = useState(0);
     const [startX, setStartX] = useState(0);
@@ -12,7 +14,7 @@ const FollowCursor = () => {
         setMouseY(e.clientY);
     };
     
-    // lerp 함수 정의
+    // lerp 함수 정의 (두 값 사이에 중간 값 계산)
     const lerp = (s, e, a) => {
         return s + (e - s) * a;
     };
@@ -32,13 +34,13 @@ const FollowCursor = () => {
         <div 
         id="circle" 
         style={{ 
-            transform: `translate(${startX}px, ${startY}px)`,
+            transform: `translate(${startX}px, ${startY +10}px)`,  //CustomCursor 안으로 들어올 수 있게 +10
             position: "fixed",
-            width: "50px",
-            height: "50px", 
+            width: "10px",
+            height: "10px", 
             borderRadius: "50%", 
             backgroundColor: "#00ff00" ,
-            zIndex:9999999999
+            zIndex:999
         }}
         ></div>
     );

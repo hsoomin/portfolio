@@ -16,6 +16,8 @@
     "react-scroll": "^1.8.9",
     "sass": "^1.66.1",
     "swiper": "^10.2.0",
+    "typeit": "^8.7.1",
+    "typewriter-effect": "^2.20.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
