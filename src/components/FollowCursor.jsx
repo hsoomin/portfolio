@@ -39,7 +39,7 @@ const FollowCursor = () => {
             width: "10px",
             height: "10px", 
             borderRadius: "50%", 
-            backgroundColor: "#00ff00" ,
+            backgroundColor: "#47DA5C" ,
             zIndex:999
         }}
         ></div>

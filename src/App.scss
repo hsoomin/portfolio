@@ -25,7 +25,7 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;;}
                 cursor: pointer;
                 a{
                     &.active{
-                        color: #00ff00;
+                        color: #47DA5C;
                         font-weight: bold;
                     }
                 }
@@ -167,7 +167,7 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;;}
                                     display: flex;
                                     flex-wrap: wrap; 
                                     justify-content: space-evenly;
-                                    padding: .5rem;
+                                    padding: .5rem 0;
                                     gap: 0.3rem;
                                     box-sizing: border-box;
                                     img{
@@ -249,8 +249,9 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;;}
                             text-align: center;
                             color: #000;
                             &:hover{
-                                background: #00ff00;
-                                color: #000;
+                                background: #47DA5C;
+                                color: #fff;
+                                border: none;
                             }
                         }
                     }
@@ -276,6 +277,81 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;;}
 .dark {
     background-color: #282c34;  
     color: white;
-    border-color: white;
+    position: relative;
+    //Cover
+    .Cover{
+        .cover-container{
+            border-bottom: 1px solid #fefefe !important;
+            .title{
+                border-bottom:1px solid #fefefe !important;
+                
+            }
+            .year{
+                border-bottom: 1px solid #fefefe !important;
+            }
+        }
+        .cover-arrow{
+            border-right: 1px solid #fefefe !important;
+        }
+    } 
+    //about
+    .About{
+        .container{
+            .about-left{
+                border-right: 1px solid #fefefe !important;
+                .about-info{
+                    border-bottom: 1px solid #fefefe !important;
+                }
+            }
+            .about-right{
+                .about-top{
+                    .about-title{
+                        border-bottom: 1px solid #fefefe !important;
+                    }
+                }
+                .about-bottom{
+                    .about-explain{
+                        &:nth-child(1){
+                            .explain{
+                                border-bottom: 1px solid #fefefe !important;
+                            }
+                        }
+                        &:nth-child(2){
+                            .about-skill{
+                                .skills-img{
+                                    border-bottom: 1px solid #fefefe !important;
+                                }
+                            }
+                            .about-etc{
+                                border-bottom: 1px solid #fefefe !important ;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //project
+    .Project{
+        .container{
+            .title{
+                border-bottom: 1px solid #fefefe !important;
+                border-top: 1px solid #fefefe !important;
+            }
+            .mySwiper{
+                .project-item{
+                    border-right: 1px solid #fefefe !important;
+                    .project-info{
+                        p{
+                            border-bottom: 1px solid #fefefe !important;
+                        }
+                        .more-btn{
+                            border: 1px solid #fefefe !important;
+                        }
+                    }
+                }
+            }
+        }
+    }    
 }
 

@@ -1,32 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-
-
-.FlowText{
-    overflow-x: hidden;
-    width: 100%;
-    height: 100vh;
-    .cover {
-        width: 100vw;
-        margin-bottom: 10rem;
-        display: flex;
-        p {
-            display: flex;
-            padding: .5rem 0;
-            font-size: 2rem;
-            font-family: "Pacifico", cursive;
-        }
-        &:nth-child(1) {
-            margin-top: 35vh;
-            transform: rotate(-2deg);
-            background-color: #fefa04;
-        }
-        &:nth-child(2) {
-            transform: rotate(2deg);
-            background-color: #5800ff;
-            justify-content: flex-end;
-            color: #fff;
-            margin-bottom: 5vh;
-        }
-    }
+.flow-text {
+    display: flex;
+    flex: 0 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: 0.3s;
+    font-size: 2.5rem;
+    font-weight:bold;
+    color: #9D9993;
+}
+.flow-text:hover {
+    color: #000;
+}
+.flow-text:hover .flow-wrap {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+.flow-wrap {
+    animation: textLoop 7s linear infinite;
+    padding-right: 1.4881vw;
 }
 
+@keyframes textLoop {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+    }
+}

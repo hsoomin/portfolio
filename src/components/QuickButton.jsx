@@ -26,7 +26,7 @@ const QuickButton = () => {
             <button 
             className="quick_top" 
             type="button"
-            style={{width: 56,height: 56, borderRadius: '50%',background: '#00ff00',border:'none',cursor: 'pointer'}}
+            style={{width: 56,height: 56, borderRadius: '50%',background: '#47DA5C',border:'none',cursor: 'pointer'}}
             >
                 <BiUpArrowAlt style={{color:'#fff', fontSize:35,}}/>
             </button>

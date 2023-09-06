@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.scss';
 import Header from './components/Header';
 import Main from './components/Main';
-import { BrowserRouter, Route,Routes } from 'react-router-dom';
+import { Route , Routes } from 'react-router-dom';
 // import Detail from './pages/Detail';
 import CustomCursor from './components/CustomCursor';
 import FollowCursor from './components/FollowCursor';
@@ -19,18 +19,16 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
-        <Header onToggleMode={handleToggleMode} isDarkMode={isDarkMode}/>
-        <CustomCursor />
-        <FollowCursor /> 
-        <QuickButton />
-          <Routes>
-            <Route path='/' element={<Main/>}/>
-            {/* <Route path='/detail/:id' element={<Detail />} /> */}
-          </Routes>
-      </div>
-    </BrowserRouter>
+    <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
+      <Header onToggleMode={handleToggleMode} isDarkMode={isDarkMode}/>
+      <CustomCursor />
+      <FollowCursor /> 
+      <QuickButton />
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        {/* <Route path='/detail/:id' element={<Detail />} /> */}
+      </Routes>
+    </div>
   );
 }
 

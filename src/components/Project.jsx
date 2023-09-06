@@ -55,7 +55,7 @@ const Project = () => {
                                     <p>{project.projectDescript}</p>
                                     <div className='project-skills' >
                                     {project.projectSkills.map((skill, skillIndex) => (
-                                            <img key={skillIndex} src={skill} alt="Skill"/>
+                                        <img key={skillIndex} src={process.env.PUBLIC_URL + skill} alt="Skill" />
                                     ))}
                                     </div>
                                     <Link to={project.projectLink} target="_blank" className="more-btn">자세히 보기</Link>

@@ -10,7 +10,7 @@ const About = () => {
             <div className='container'>
                 <div className="about-left">
                     <div className="about-img">
-                        <img src="/img/1.jpg" alt="" />
+                        <img src={process.env.PUBLIC_URL + '/img/1.jpg'} alt="" />
                     </div>
                     <div className='about-info'>
                         <p>01012345678</p>
@@ -46,20 +46,20 @@ const About = () => {
                             <div className="about-skill">
                                 <h3>Skills</h3>
                                 <div className='skills-img'>
-                                    <img width={100} src="/img/skills/HTML.svg" alt="" />
-                                    <img width={100} src="/img/skills/CSS.svg" alt="" />
-                                    <img width={100} src="/img/skills/Sass.svg" alt="" />
-                                    <img width={100} src="/img/skills/Bootstrap.svg" alt="" />
-                                    <img width={100} src="/img/skills/JQuery.svg" alt="" />
-                                    <img width={100} src="/img/skills/JavaScript.svg" alt="" />
-                                    <img width={100} src="/img/skills/Figma-Light.svg" alt="" />
-                                    <img width={100} src="/img/skills/React-Dark.svg" alt="" />
-                                    <img width={100} src="/img/skills/VueJS-Light.svg" alt="" />
-                                    <img width={100} src="/img/skills/TypeScript.svg" alt="" />
-                                    <img width={100} src="/img/skills/NodeJS-Dark.svg" alt="" />
-                                    <img width={100} src="/img/skills/Git.svg" alt="" />
-                                    <img width={100} src="/img/skills/Github-Dark.svg" alt="" />
-                                    <img width={100} src="/img/skills/VSCode-Light.svg" alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/HTML.svg'} alt=""/>
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/CSS.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Sass.svg'}  alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Bootstrap.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/JQuery.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/JavaScript.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Figma-Light.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/React-Dark.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/VueJS-Light.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/TypeScript.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/NodeJS-Dark.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Git.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Github-Dark.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/VSCode-Light.svg'} alt="" />
                                 </div>
                             </div>
                             <div className="about-etc">
