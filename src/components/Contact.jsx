@@ -22,10 +22,13 @@ const Contact = () => {
                     <div className="contact-qr">
                         <img src={process.env.PUBLIC_URL + '/img/QR.png'} alt="" />
                     </div>
+                    <div className="hover">
+                        <img src={process.env.PUBLIC_URL + '/img/hover.png'} alt="" />
+                    </div>
                     <div className='contact-info'>
-                        <p>01012345678</p>
-                        <p>sdfsdfsdf@</p>
-                        <p>hsoomin</p>
+                        <p>Tel. 01012345678</p>
+                        <p>E-Mail. sdfsdfsdf@</p>
+                        <p>Git. hsoomin</p>
                     </div>
                 </div>
                 <div className='contact-right'>
