@@ -76,9 +76,7 @@ const Contact = () => {
                     </form>
                 </div>
             </div>
-            <div className="flowText">
-                <FlowText />
-            </div>
+            <FlowText />
         </div>
     );
 };
