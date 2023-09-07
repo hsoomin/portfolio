@@ -3,7 +3,6 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import FlowText from './FlowText';
-import './Contact.scss'
 
 const Contact = () => {
     const [state, handleSubmit] = useForm("xqkvbywp");
@@ -23,11 +22,11 @@ const Contact = () => {
                         <img src={process.env.PUBLIC_URL + '/img/QR.png'} alt="" />
                     </div>
                     <div className="hover">
-                        <img src={process.env.PUBLIC_URL + '/img/hover.png'} alt="" />
+                        <img src={process.env.PUBLIC_URL + '/img/hoverbg.png'} alt="" />
                     </div>
                     <div className='contact-info'>
                         <p>Tel. 01012345678</p>
-                        <p>E-Mail. sdfsdfsdf@</p>
+                        <p>E-Mail. sdfsdfsdf@.com</p>
                         <p>Git. hsoomin</p>
                     </div>
                 </div>
