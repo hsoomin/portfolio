@@ -7,7 +7,7 @@ import { Route , Routes } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import FollowCursor from './components/FollowCursor';
 import QuickButton from './components/QuickButton';
-import AnimatedCursor from "react-animated-cursor"
+// import AnimatedCursor from "react-animated-cursor"
 
 function App() {
 
@@ -22,9 +22,9 @@ function App() {
   return (
     <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
       <Header onToggleMode={handleToggleMode} isDarkMode={isDarkMode}/>
-      {/* <CustomCursor />
-      <FollowCursor />  */}
-      <AnimatedCursor 
+      <CustomCursor />
+      <FollowCursor /> 
+      {/* <AnimatedCursor 
       innerSize={20}
       outerSize={10}
       color='127,28,255'
@@ -44,7 +44,7 @@ function App() {
         'button',
         '.link'
       ]}
-      />
+      /> */}
       <QuickButton />
       <Routes>
         <Route path='/' element={<Main/>}/>
