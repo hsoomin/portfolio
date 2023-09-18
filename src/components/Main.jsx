@@ -4,7 +4,7 @@ import Contact from './Contact';
 import Cover from './Cover';
 import Project from './Project';  
 
-const MainPage = () => {
+const Main = () => {
     
     return (
         <div>
@@ -16,4 +16,4 @@ const MainPage = () => {
     );
 };
 
-export default MainPage;
+export default Main;

@@ -52,14 +52,15 @@ const About = () => {
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Bootstrap.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/JQuery.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/JavaScript.svg'} alt="" />
-                                    <img width={100} className="bounce-img" src={process.env.PUBLIC_URL + '/img/skills/Figma-Light.svg'} alt="" />
-                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/React-Dark.svg'} alt="" />
-                                    <img width={100} className="bounce-img" src={process.env.PUBLIC_URL + '/img/skills/VueJS-Light.svg'} alt="" />
-                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/TypeScript.svg'} alt="" />
+                                    <img width={100} className="bounce-img" src={process.env.PUBLIC_URL + '/img/skills/React-Dark.svg'} alt="" />
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/VueJS-Light.svg'} alt="" />
+                                    {/* <img width={100} src={process.env.PUBLIC_URL + '/img/skills/TypeScript.svg'} alt="" /> */}
+                                    <img width={100} src={process.env.PUBLIC_URL + '/img/skills/NextJS-Light.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/NodeJS-Dark.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Git.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/Github-Dark.svg'} alt="" />
                                     <img width={100} src={process.env.PUBLIC_URL + '/img/skills/VSCode-Light.svg'} alt="" />
+                                    <img width={100} className="bounce-img" src={process.env.PUBLIC_URL + '/img/skills/Figma-Light.svg'} alt="" />
                                 </div>
                             </div>
                             <div className="about-etc">

@@ -32,15 +32,9 @@ const FollowCursor = () => {
     
     return (
         <div 
-        id="circle" 
+        className="circle" 
         style={{ 
             transform: `translate(${startX}px, ${startY +10}px)`,  //CustomCursor 안으로 들어올 수 있게 +10
-            position: "fixed",
-            width: "10px",
-            height: "10px", 
-            borderRadius: "50%", 
-            backgroundColor: "#47DA5C" ,
-            zIndex:999
         }}
         ></div>
     );

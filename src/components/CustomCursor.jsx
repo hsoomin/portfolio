@@ -18,15 +18,8 @@ const CustomCursor = () => {
         <div 
         className="custom-cursor"
         style={{
-            width: 30,
-            height: 30,
-            borderRadius: '50%',
-            backgroundColor: '#47DA5C',
-            position:'fixed',
-            zIndex:999,
             left: `${position.x}px`,
             top: `${position.y}px`
-            
         }}
         ></div>
     );

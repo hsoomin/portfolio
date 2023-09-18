@@ -1,13 +1,11 @@
 /*스크롤바 */
 ::-webkit-scrollbar{width: 7px;}
 ::-webkit-scrollbar-track{background: #fff}
-::-webkit-scrollbar-thumb{background:#47DA5C; border-radius: 10px;}
+::-webkit-scrollbar-thumb{background:#a639ff; border-radius: 10px;}
+.project-img::-webkit-scrollbar-thumb{background:#47DA5C !important; border-radius: 10px;}
 
 /*드래그 색*/
-::selection {
-  background: #705bfa;
-  color: #fff;
-}
+::selection {background: #705bfa; color: #fff;}
 
 body {
   margin: 0;
