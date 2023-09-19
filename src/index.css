@@ -7,6 +7,7 @@
 /*드래그 색*/
 ::selection {background: #705bfa; color: #fff;}
 
+html{font-size:  calc(0.42vw + 2px);}
 body {
   margin: 0;
   padding : 0; 

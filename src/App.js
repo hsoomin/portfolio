@@ -23,8 +23,8 @@ function App() {
         // <Scroll100vh>
         <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
             <Header onToggleMode={handleToggleMode} isDarkMode={isDarkMode}/>
-            <CustomCursor />
-            <FollowCursor /> 
+            {/* <CustomCursor />
+            <FollowCursor />  */}
             {/* <AnimatedCursor 
             innerSize={20}
             outerSize={10}

@@ -1,12 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
 
 
-// body{
-//     overflow: hidden;
-// }
+//반응형 사이즈
+$mobile-max: 360px;
+$phone-max: 768px;
+$tablet-max: 1024px;
+$desktop-min: 1440px;
+
+@mixin mobile{
+    @media (max-width: $mobile-max) {
+        @content;
+    }
+} 
+@mixin phone{
+    @media (max-width: $phone-max) {
+        @content;
+    }
+} 
+@mixin tablet{
+    @media (max-width: $tablet-max) {
+        @content;
+    }
+} 
+@mixin desktop{
+    @media (max-width: $desktop-min){
+        @content;
+    }
+}
+
+
 .App{
     position: relative;
     //Header
@@ -28,12 +52,17 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
             li{
                 cursor: pointer;
                 a{
+                    font-size: 2.5rem;
                     &.active{
                         color: #47DA5C;
                         font-weight: bold;
                     }
                 }
-                img{width: 20px; height: 20px;}
+            }
+            .mode{
+                font-size: 2.5rem;
+                line-height: 1.5;
+                color: gold;
             }
         }
     }
@@ -41,42 +70,48 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
     .Cover{
         width: 100%;
         height: 100vh;
-        position: relative;
         padding: 3rem;
         box-sizing: border-box;
+        position: relative;
         .cover-container{
-            border-bottom: 1px solid #000;
+            display: flex;
+            flex-direction: column;
             width: 100%;
             height: 100%;
             .title{
+                flex-basis: 25%;
                 border-bottom: 1px solid #000;
+                line-height: 1.5;
                 h1{
-                    font-size: 150px;
+                    font-size: 15rem;
                     font-family: 'Noto-sans';
-                    
                 }   
             }
             .year{
+                flex-basis: 25%;
                 border-bottom: 1px solid #000;
+                line-height: 1.5;
                 h2{
-                    font-size: 150px;
+                    font-size: 15rem;
                     font-family: 'Noto-sans';
                 }
             }
-        }
-        .cover-arrow{
-            width: 100%;
-            height: calc(100vh - 497px);   //높이 수정하기
-            border-right: 1px solid #000;
-            .arrow-down{
-                font-size: 315px;
-                animation: arrowMove 1s infinite alternate ease-in-out;
-                position: absolute;
-                right: 20px;
-                bottom: 0;
-                @keyframes arrowMove {
-                    0% {transform: translateY(0);}
-                    100% {transform: translateY(10px);}
+            .cover-arrow{
+                flex-basis: 50%;
+                width: 100%;
+                // height: calc(100vh - 497px);   //높이 수정하기
+                border-right: 1px solid #000;
+                border-bottom: 1px solid #000;
+                .arrow-down{
+                    font-size: 32rem;
+                    animation: arrowMove 1s infinite alternate ease-in-out;
+                    position: absolute;
+                    bottom: -5rem;
+                    right: 2rem;
+                    @keyframes arrowMove {
+                        0% {transform: translateY(0);}
+                        100% {transform: translateY(10px);}
+                    }
                 }
             }
         }
@@ -88,20 +123,19 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
         .container{
             width: 100%;
             height: 100%;
-            padding: 0 2rem;  //7REM 2REM
+            padding: 0 2rem; 
             box-sizing: border-box;
             display: flex;
             .about-left{
+                width: 100%;
                 display: flex;
                 flex-basis: 30%;
-                // background: lemonchiffon;
-                border-right: 1px solid #000;
                 flex-direction: column;
                 justify-content: center;
                 gap: 2rem;
                 padding: 5rem;
                 box-sizing: border-box;
-                width: 100%;
+                border-right: 1px solid #000;
                 .about-img{
                     width: 100%;
                     img{width: 100%;}
@@ -109,24 +143,21 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                 .about-info{
                     text-align: right;
                     border-bottom: 1px solid #000;
-                    p{}
                 }
             }
             .about-right{
                 display: flex;
                 flex-direction: column;
                 flex-basis: 70%;
-                // background: mediumaquamarine;
                 padding: 0 2rem;  
                 box-sizing: border-box;
                 position: relative;
                 .about-top{
-                    // background: palevioletred;
                     flex-basis: 20%;
                     .about-title{
-                        font-size: 100px;
+                        font-size: 10rem;
+                        margin-top: 10rem;
                         border-bottom: 1px solid #000;
-                        margin-top: 3rem;
                     }
                 }
                 .about-bottom{
@@ -134,8 +165,6 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                     display: flex;
                     gap: 5rem;
                     .about-explain{
-                        // flex-basis: 40%;
-                        // background: mediumpurple;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -158,40 +187,31 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                             gap: 7rem;
                             justify-content: center;
                             .about-skill{
-                                // flex-basis: 60%;
-                                // background: rgb(199, 182, 233);
-                                justify-content: center;
                                 display: flex;
                                 flex-direction: column;
+                                justify-content: center;
                                 h3{
                                     font-size: 1.5rem;
                                     font-weight: 400;
                                 }
                                 .skills-img{
-                                    border-bottom: 1px solid #000;
                                     display: flex;
                                     flex-wrap: wrap; 
                                     justify-content: space-evenly;
-                                    padding: .5rem 0;
                                     gap: 0.3rem;
+                                    padding: .5rem 0;
                                     box-sizing: border-box;
+                                    border-bottom: 1px solid #000;
                                     img{
-                                        width: 13%;  //13%
+                                        width: 13%; 
                                         &:hover{transform: scale(1.1);}
                                     }
                                     .bounce-img {
-                                        &:hover {
-                                            animation: bounceAnimation .3s infinite alternate;
-                                        }
+                                        &:hover {animation: bounceAnimation .3s infinite alternate;}
                                     }
                                     @keyframes bounceAnimation {
-                                        from {
-                                            transform: translateY(0);
-                                        }
-                                        
-                                        to {
-                                            transform: translateY(-10px);
-                                        }
+                                        from {transform: translateY(0);}
+                                        to {transform: translateY(-10px);}
                                     }
                                 }
                             }
@@ -214,7 +234,7 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
             padding: 3rem 5rem;
             box-sizing: border-box;
             .title{
-                font-size: 100px;
+                font-size: 10rem;
                 border-bottom: 1px solid #000;
                 border-top: 1px solid #000;
             }
@@ -222,7 +242,6 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                 width: 100%;
                 display: flex;
                 align-items: center;
-                // height: 100%;
                 gap: 1rem;
                 padding: 1rem 0;
                 box-sizing: border-box;
@@ -248,12 +267,12 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                         gap: 1rem;
                         h3{
                             text-align: center;
-                            padding: 15px 0;
+                            padding: 1.5rem 0;
                             box-sizing: border-box;
                         }
                         p{
                             border-bottom: 1px solid #000;
-                            padding-bottom: 10px;
+                            padding-bottom: 1rem;
                             box-sizing: border-box;
                             text-align: center;
                         }
@@ -261,15 +280,15 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                             width: 100%;
                             display: flex;
                             gap: .5rem;
-                            img{width: 25px;}
+                            img{width: 2.5rem;}
                         }
                         p{color: #333;}
                         .more-btn{
                             background: transparent;
-                            border: 1px solid #000;
-                            padding: .6rem;
-                            text-align: center;
                             color: #000;
+                            text-align: center;
+                            padding: .6rem;
+                            border: 1px solid #000;
                             &:hover{
                                 background: #47DA5C;
                                 color: #fff;
@@ -300,8 +319,8 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                 gap: 2rem;
                 position: relative;
                 .contact-qr{
-                    width: 12rem;
-                    height: 12rem;
+                    width: 20rem;
+                    height: 20rem;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                     img{
                         width: 100%;
@@ -320,12 +339,8 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                     }
                     
                     @keyframes spin {
-                        from {
-                            transform: rotate(0deg);
-                        }
-                        to {
-                            transform: rotate(360deg);
-                        }
+                        from {transform: rotate(0deg);}
+                        to {transform: rotate(360deg);}
                     }
                 }
                 .contact-qr:hover + .hover {
@@ -336,36 +351,36 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                 }
             }
             .contact-right{
-                flex-basis: 50%;
                 display: flex;
+                flex-basis: 50%;
                 flex-direction: column;
-                padding: 3rem 5rem;
+                padding: 5rem;
                 box-sizing: border-box;
                 .contact-form{
-                    border: 1px solid #000;
                     width: 100%;
                     height: 100%;
-                    padding: 2rem;
-                    box-sizing: border-box;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    padding: 2rem;
+                    box-sizing: border-box;
+                    border: 1px solid #000;
                     .title{
                         h4{
                             text-align: center;
-                            font-size: 50px;
+                            font-size: 5rem;
                         }
                     }
                     .info{
                         label{
                             width: 100%;
-                            font-size: 20px;
+                            font-size: 2rem;
                         }
                         input{
                             width: 100%;
-                            padding: 10px;
+                            margin-top: 1rem;
+                            padding: 1rem;
                             box-sizing: border-box;
-                            margin-top: 10px;
                             border: none;
                             border-bottom: 1px solid #000;
                             outline: none;
@@ -384,16 +399,14 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
                     }
                     button{
                         background: transparent;
-                        border: 1px solid #000;
-                        padding: 10px 20px;
                         margin: 0 auto;
-                        width: 5.5rem;
+                        padding: 1rem 2rem;
+                        border: 1px solid #000;
                         &:hover{
                             background: #47DA5C;
                         }
                     }
                 }
-                
             }
         }
         .flowText{
@@ -431,6 +444,254 @@ body{font-family: 'Poppins','Nanum Gothic Coding', serif;}
             cursor: pointer;
             background: #47DA5C;
         }
+    }
+
+    @include desktop{
+
+    }
+    @include tablet{
+        .About{
+            .container{
+                .about-left{
+                    padding: 2rem;
+                }
+                .about-right{
+                    .about-top{
+                        .about-title{
+                            font-size: 15rem;
+                            margin-top: 12rem;
+                        }
+                    }
+                    .about-bottom{
+                        gap: 0;
+                    }
+                }
+            }
+        }
+        .Project{
+            .container{
+                .mySwiper{
+                    padding-top: 10rem;
+                    box-sizing: border-box;
+                }
+            }
+        } 
+        .Contact{
+            .container{
+                padding: 6rem 2rem 0 2rem;
+                .contact-left{
+                    .contact-qr{
+                        width: 16rem;
+                        height: 16rem;
+                    }
+                    .hover{
+                        top: 25%;  
+                        left: 38%;
+                    }
+                    .contact-info{
+                        p{font-size: 1.4rem;}
+                    }
+                }
+                .contact-right{
+                    padding: 3rem 2rem;
+                }
+            }
+        }   
+    } 
+    @include phone{
+        .Header{
+            ul{
+                gap: 2rem;
+            }
+        }
+        .About{
+            .container{
+                .about-left{
+                    padding: 2rem;
+                }
+                .about-right{
+                    .about-bottom{
+                        .about-explain{
+                            padding: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        .Contact{
+            .container{
+                .contact-left{
+                    .contact-qr{
+                        width: 25rem;
+                        height: 25rem;
+                    }
+                }
+                .contact-right{
+                    .contact-form{
+                        padding: 3rem;
+                    }
+                }
+            }
+        }  
+    }
+
+
+
+
+    @include mobile{
+        .Cover{
+            height: 100%;
+            .cover-container{
+                .title{
+                    flex-basis: 0; 
+                    h1{
+                        font-size: 12rem;
+                        line-height: 2;
+                    }   
+                }
+                .year{
+                    flex-basis: 0;
+                    h2{
+                        font-size: 12rem;
+                        line-height: 2;
+                    }
+                }
+                .cover-arrow{
+                    flex-basis: 150px;
+                    .arrow-down{
+                        font-size: 24rem;
+                        bottom: 0;
+                    }
+                }
+            }
+        } 
+        .About{
+            height: 100%;
+            .container{
+                padding: 3rem;
+                flex-direction: column-reverse;
+                .about-left{
+                    padding: 0;
+                    border-right: none;
+                }
+                .about-right{
+                    flex-basis: 0;
+                    padding: 0;  
+                    .about-top{
+                        flex-basis: 0;
+                        .about-title{
+                            font-size: 10rem;
+                        }
+                    }
+                    .about-bottom{
+                        flex-basis: 0;
+                        flex-direction: column;
+                        gap: 4rem;
+                        margin-bottom: 5rem;
+                        .about-explain{
+                            padding: 0;
+                            &:nth-child(1){
+                                flex-basis: 0;
+                                gap: 2rem;
+                            }
+                            &:nth-child(2){
+                                flex-basis: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .Project{
+            height: 100%;
+            margin-top: 12rem;
+            .container{
+                padding: 3rem;
+                .title{
+                    font-size: 10rem;
+                }
+                .mySwiper{
+                    .project-item{
+                        border-right: none;
+                        .project-img{
+                            height: 300px;
+                        }
+                        .project-info{
+                            gap: 4rem;
+                            h3{
+                                padding: 3rem 0;
+                            }
+                            p{
+                                padding-bottom: 1rem;
+                                font-size: 1rem;
+                            }
+                            .project-skills{
+                                justify-content: center;
+                                align-items: center;
+                                gap: 1rem;
+                                img{width: 5rem;}
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        .Contact{
+            height: 100%;
+            margin-top: 12rem;
+            margin-bottom: 5rem;
+            .container{
+                height: 100%;
+                padding: 3rem 3rem 5rem 3rem;;
+                flex-direction: column-reverse;
+                gap: 5rem;
+                .contact-left{
+                    flex-basis: 0;
+                    gap: 5rem;
+                    .contact-qr{
+                        width: 20rem;
+                        height: 20rem;
+                        box-shadow: none;
+                    }
+                    .hover{
+                        display: none;
+                    }
+                    .contact-qr:hover + .hover {
+                        opacity: 1;
+                    }
+                    .contact-info{
+                        p{}
+                    }
+                }
+                .contact-right{
+                    flex-basis: 0;
+                    padding: 2rem;
+                    .contact-form{
+                        padding: 5rem;
+                        .info{
+                            textarea{
+                                width: 100%;
+                                height: 20rem;
+                                resize: none;
+                                margin-top: 30px;
+                                padding: 1rem;
+                                box-sizing: border-box;
+                                border: none;
+                                border: 1px solid #000;
+                                outline: none;
+                            }
+                        }
+                        button{
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            .flowText{
+                width: 100%;
+                height: 10%;
+            }
+        } 
     }
 }
 

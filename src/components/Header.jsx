@@ -1,3 +1,4 @@
+import { BsFillSunFill , BsFillMoonFill  } from "react-icons/bs"; 
 import React from 'react';
 import { Link } from 'react-scroll';
 
@@ -19,8 +20,8 @@ const Header = ({ onToggleMode, isDarkMode }) => {
                     <Link to='section4' spy={true} smooth={true}>CONTACT</Link>
                 </li>            
                 {isDarkMode 
-                    ? (<li className='mode' onClick={onToggleMode}>🌞</li>) 
-                    : (<li className='mode' onClick={onToggleMode}>🌙</li>)
+                    ? (<li className='mode' onClick={onToggleMode}><BsFillSunFill /></li>) 
+                    : (<li className='mode' onClick={onToggleMode}><BsFillMoonFill /></li>)
                 }
             </ul> 
         </div>
