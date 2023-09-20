@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 body{font-family: 'Poppins','Nanum Gothic Coding', 'Noto-sans', serif ;}
 
-
 //반응형 사이즈
 $mobile-max: 360px;
 $phone-max: 768px;
@@ -325,6 +324,9 @@ $desktop-min: 1440px;
                 align-items: center;
                 gap: 2rem;
                 position: relative;
+                .contact-title{
+                    font-size: 10rem;
+                }
                 .contact-qr{
                     width: 20rem;
                     height: 20rem;
@@ -451,13 +453,19 @@ $desktop-min: 1440px;
             border: none;
             cursor: pointer;
             background: #47DA5C;
+            .quick-arrow{
+                color: #fff;
+                font-size: 35px;
+            }
         }
     }
 
-    @include desktop{
-
-    }
     @include tablet{
+        .Header{
+            ul{
+                gap: 2rem;
+            }
+        }
         .About{
             .container{
                 .about-left{
@@ -469,9 +477,6 @@ $desktop-min: 1440px;
                             font-size: 15rem;
                             margin-top: 12rem;
                         }
-                    }
-                    .about-bottom{
-                        gap: 0;
                     }
                 }
             }
@@ -504,49 +509,10 @@ $desktop-min: 1440px;
                     padding: 3rem 2rem;
                 }
             }
-        }   
+        } 
     } 
+
     @include phone{
-        .Header{
-            ul{
-                gap: 2rem;
-            }
-        }
-        .About{
-            .container{
-                .about-left{
-                    padding: 2rem;
-                }
-                .about-right{
-                    .about-bottom{
-                        .about-explain{
-                            padding: 2rem;
-                        }
-                    }
-                }
-            }
-        }
-        .Contact{
-            .container{
-                .contact-left{
-                    .contact-qr{
-                        width: 25rem;
-                        height: 25rem;
-                    }
-                }
-                .contact-right{
-                    .contact-form{
-                        padding: 3rem;
-                    }
-                }
-            }
-        }  
-    }
-
-
-
-
-    @include mobile{
         .Cover{
             height: 100%;
             .cover-container{
@@ -575,35 +541,33 @@ $desktop-min: 1440px;
         } 
         .About{
             height: 100%;
+            margin-top: 15rem;
             .container{
                 padding: 3rem;
-                flex-direction: column-reverse;
                 .about-left{
-                    padding: 0;
-                    border-right: none;
+                    padding: 3rem;
                 }
                 .about-right{
-                    flex-basis: 0;
-                    padding: 0;  
                     .about-top{
-                        flex-basis: 0;
                         .about-title{
                             font-size: 10rem;
+                            margin-top: 0;
                         }
                     }
                     .about-bottom{
-                        flex-basis: 0;
+                        flex-basis: 80%;
+                        display: flex;
                         flex-direction: column;
-                        gap: 4rem;
-                        margin-bottom: 5rem;
+                        gap: 5rem;
                         .about-explain{
-                            padding: 0;
-                            &:nth-child(1){
-                                flex-basis: 0;
-                                gap: 2rem;
-                            }
                             &:nth-child(2){
-                                flex-basis: 0;
+                                .about-skill{
+                                    .skills-img{
+                                        img{
+                                            width: 6%; 
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -612,20 +576,13 @@ $desktop-min: 1440px;
         }
         .Project{
             height: 100%;
-            margin-top: 12rem;
             .container{
                 padding: 3rem;
-                .title{
-                    font-size: 10rem;
-                }
                 .mySwiper{
+                    padding-top: 15rem;
                     .project-item{
-                        border-right: none;
-                        .project-img{
-                            height: 300px;
-                        }
                         .project-info{
-                            gap: 4rem;
+                            gap: 2rem;
                             h3{
                                 padding: 3rem 0;
                             }
@@ -639,6 +596,9 @@ $desktop-min: 1440px;
                                 gap: 1rem;
                                 img{width: 5rem;}
                             }
+                            .more-btn{
+                                padding: 1rem;
+                            }
                         }
                     }
                 }
@@ -651,14 +611,17 @@ $desktop-min: 1440px;
             .container{
                 height: 100%;
                 padding: 3rem 3rem 5rem 3rem;;
-                flex-direction: column-reverse;
-                gap: 5rem;
+                flex-direction: column;
+                gap: 7rem;
+                .contact-title{
+                    font-size: 10rem;
+                }
                 .contact-left{
                     flex-basis: 0;
                     gap: 5rem;
                     .contact-qr{
-                        width: 20rem;
-                        height: 20rem;
+                        width: 25rem;
+                        height: 25rem;
                         box-shadow: none;
                     }
                     .hover{
@@ -700,6 +663,19 @@ $desktop-min: 1440px;
                 height: 10%;
             }
         } 
+    }
+
+    @include mobile{
+        .QuickButton{
+            right: 2%;
+            .quick_top{
+                width: 30px;
+                height: 30px;
+                .quick-arrow{
+                    font-size: 19px;
+                }
+            }
+        }
     }
 }
 

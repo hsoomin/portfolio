@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import FlowText from './FlowText';
 
+
 const Contact = () => {
     const [state, handleSubmit] = useForm("xqkvbywp");
     
@@ -18,12 +19,21 @@ const Contact = () => {
         <div className='Contact' id='section4'>
             <div className='container'>
                 <div className='contact-left'>
+                    <h2 className="contact-title">
+                        <Typewriter
+                        options={{
+                            strings: ['CONTACT'],
+                            autoStart: true,
+                            loop: true,
+                        }}
+                        />
+                    </h2> 
                     <div className="contact-qr">
                         <img src={process.env.PUBLIC_URL + '/img/QR.png'} alt="" />
                     </div>
-                    <div className="hover">
+                    {/* <div className="hover">
                         <img src={process.env.PUBLIC_URL + '/img/hoverbg.png'} alt="" />
-                    </div>
+                    </div> */}
                     <div className='contact-info'>
                         <p>Tel. 01012345678</p>
                         <p>E-Mail. sdfsdfsdf@.com</p>
@@ -33,15 +43,7 @@ const Contact = () => {
                 <div className='contact-right'>
                     <form onSubmit={handleSubmit} className='contact-form'>
                         <div className='title'>
-                            <h4>
-                                <Typewriter
-                                options={{
-                                    strings: ['E-MAIL'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                                />
-                            </h4>
+                            <h4>E-MAIL</h4>
                         </div>
                         <div className='info'>
                             <input 

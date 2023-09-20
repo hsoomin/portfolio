@@ -26,7 +26,7 @@ const QuickButton = () => {
             className="quick_top" 
             type="button"
             >
-                <BiUpArrowAlt style={{color:'#fff', fontSize:35,}}/>
+                <BiUpArrowAlt className='quick-arrow'/>
             </button>
         </div>
     );
