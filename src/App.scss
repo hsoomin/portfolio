@@ -67,6 +67,7 @@ $desktop-min: 1440px;
     }
     //Cover
     .Cover{
+        font-family: 'Noto-sans';
         width: 100%;
         height: 100vh;
         padding: 3rem;
@@ -80,10 +81,9 @@ $desktop-min: 1440px;
             .title{
                 flex-basis: 25%;
                 border-bottom: 1px solid #000;
-                line-height: 1.5;
+                line-height: 2;
                 h1{
                     font-size: 15rem;
-                    font-family: 'Noto-sans';
                 }   
             }
             .year{
@@ -92,13 +92,11 @@ $desktop-min: 1440px;
                 line-height: 1.5;
                 h2{
                     font-size: 15rem;
-                    font-family: 'Noto-sans';
                 }
             }
             .cover-arrow{
                 flex-basis: 50%;
                 width: 100%;
-                // height: calc(100vh - 497px);   //높이 수정하기
                 border-right: 1px solid #000;
                 border-bottom: 1px solid #000;
                 .arrow-down{
@@ -412,6 +410,7 @@ $desktop-min: 1440px;
                         margin: 0 auto;
                         padding: 1rem 2rem;
                         border: 1px solid #000;
+                        color: #000;
                         &:hover{
                             background: #47DA5C;
                         }
@@ -461,6 +460,13 @@ $desktop-min: 1440px;
     }
 
     @include tablet{
+        .Cover{
+            .cover-container{
+                .year{
+                    line-height: 2;
+                }
+            }
+        } 
         .Header{
             ul{
                 gap: 2rem;
@@ -613,9 +619,6 @@ $desktop-min: 1440px;
                 padding: 3rem 3rem 5rem 3rem;;
                 flex-direction: column;
                 gap: 7rem;
-                .contact-title{
-                    font-size: 10rem;
-                }
                 .contact-left{
                     flex-basis: 0;
                     gap: 5rem;
@@ -624,43 +627,14 @@ $desktop-min: 1440px;
                         height: 25rem;
                         box-shadow: none;
                     }
-                    .hover{
-                        display: none;
-                    }
-                    .contact-qr:hover + .hover {
-                        opacity: 1;
-                    }
-                    .contact-info{
-                        p{}
-                    }
                 }
                 .contact-right{
                     flex-basis: 0;
                     padding: 2rem;
                     .contact-form{
                         padding: 5rem;
-                        .info{
-                            textarea{
-                                width: 100%;
-                                height: 20rem;
-                                resize: none;
-                                margin-top: 30px;
-                                padding: 1rem;
-                                box-sizing: border-box;
-                                border: none;
-                                border: 1px solid #000;
-                                outline: none;
-                            }
-                        }
-                        button{
-                            font-size: 1rem;
-                        }
                     }
                 }
-            }
-            .flowText{
-                width: 100%;
-                height: 10%;
             }
         } 
     }
@@ -678,7 +652,6 @@ $desktop-min: 1440px;
         }
     }
 }
-
 
 
 /*light mode */

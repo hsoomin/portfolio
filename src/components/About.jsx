@@ -63,9 +63,9 @@ const About = () => {
                                     <img width={100} className="bounce-img" src={process.env.PUBLIC_URL + '/img/skills/Figma-Light.svg'} alt="" />
                                 </div>
                             </div>
-                            <div className="about-etc">
+                            {/* <div className="about-etc">
                                 <p>fdgdfgdfg</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
