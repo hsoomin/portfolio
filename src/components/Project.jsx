@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectData from '../data/ProjectData';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import Typewriter from 'typewriter-effect';
 
 
@@ -26,20 +24,16 @@ const Project = () => {
                 <Swiper 
                     className="mySwiper"
                     navigation={true} 
-                    modules={[Navigation]}
                     breakpoints={{
                         640: {
                             slidesPerView: 1,
                         },
                         768: {
-                            slidesPerView: 2,
+                            slidesPerView: 1.3,
                         },
                         1024: {
-                            slidesPerView: 3,
+                            slidesPerView: 2.4,
                         }
-                    }}
-                    style={{
-                        "--swiper-navigation-color": "#888",
                     }}
                 >
                 {ProjectData.map((project, index) => {

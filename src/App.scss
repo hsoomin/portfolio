@@ -38,7 +38,7 @@ $desktop-min: 1440px;
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 100;
+            z-index: 100000000;
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -61,7 +61,6 @@ $desktop-min: 1440px;
             .mode{
                 font-size: 2.5rem;
                 line-height: 1.5;
-                color: gold;
             }
         }
     }
@@ -237,15 +236,15 @@ $desktop-min: 1440px;
             box-sizing: border-box;
             .title{
                 font-size: 10rem;
-                margin-top: 7rem;
-                border-bottom: 1px solid #000;
+                margin-top: 2.5rem;
                 border-top: 1px solid #000;
+                border-bottom: 1px solid #000;
             }
             .mySwiper{
                 width: 100%;
                 display: flex;
                 align-items: center;
-                padding: 4rem 0;
+                padding: 5.5rem 0;
                 box-sizing: border-box;
                 .project-item{
                     display: flex;
@@ -253,10 +252,10 @@ $desktop-min: 1440px;
                     gap: 1rem;
                     width: 100%;
                     border-right: 1px solid #000 ;
-                    padding: 2rem;
+                    padding: 0 8rem;
                     box-sizing: border-box;
                     .project-img{
-                        height: 45vh;
+                        height: 37vh;
                         overflow-y: scroll;
                         img{
                             width: 100%;
@@ -283,16 +282,19 @@ $desktop-min: 1440px;
                         .project-skills{
                             width: 100%;
                             display: flex;
-                            gap: .5rem;
-                            img{width: 2.5rem;}
+                            gap: 1.5rem;
+                            justify-content: center;
+                            margin: 8px 0;
+                            img{width: 4rem;}
                         }
                         .more-btn{
                             font-size: 2rem;
                             background: transparent;
                             color: #000;
                             text-align: center;
-                            padding: .6rem;
+                            padding: 1rem;
                             border: 1px solid #000;
+                            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
                             &:hover{
                                 background: #47DA5C;
                                 color: #fff;
@@ -361,7 +363,7 @@ $desktop-min: 1440px;
                 display: flex;
                 flex-basis: 50%;
                 flex-direction: column;
-                padding: 5rem;
+                padding: 10rem 7rem 6rem 0;
                 box-sizing: border-box;
                 .contact-form{
                     width: 100%;
@@ -369,9 +371,10 @@ $desktop-min: 1440px;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    padding: 2rem;
+                    padding: 7rem;
                     box-sizing: border-box;
                     border: 1px solid #000;
+                    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
                     .title{
                         h4{
                             text-align: center;
@@ -394,7 +397,7 @@ $desktop-min: 1440px;
                         }
                         textarea{
                             width: 100%;
-                            height: 20rem;
+                            height: 25rem;
                             resize: none;
                             margin-top: 30px;
                             padding: 1rem;
@@ -513,6 +516,30 @@ $desktop-min: 1440px;
                 }
                 .contact-right{
                     padding: 3rem 2rem;
+                    .contact-form{
+                        padding: 7rem;
+                        box-sizing: border-box;
+                        border: 1px solid #000;
+                        .info{
+                            label{
+                                width: 100%;
+                                font-size: 2rem;
+                            }
+                            input{
+                                width: 100%;
+                                margin-top: 1rem;
+                                padding: 1rem;
+                                box-sizing: border-box;
+                                border: none;
+                                border-bottom: 1px solid #000;
+                                outline: none;
+                            }
+                            textarea{
+                                height: 45rem;
+                                margin-top: 3rem;
+                            }
+                        }
+                    }
                 }
             }
         } 
@@ -630,9 +657,9 @@ $desktop-min: 1440px;
                 }
                 .contact-right{
                     flex-basis: 0;
-                    padding: 2rem;
+                    padding: 0 10rem 5rem 10rem;
                     .contact-form{
-                        padding: 5rem;
+                        padding: 10rem;
                     }
                 }
             }
@@ -640,6 +667,12 @@ $desktop-min: 1440px;
     }
 
     @include mobile{
+        .custom-cursor{
+            display: none;
+        }
+        .circle{
+            display: none;
+        }
         .QuickButton{
             right: 2%;
             .quick_top{
@@ -743,7 +776,7 @@ $desktop-min: 1440px;
                 .project-item{
                     border-right: 1px solid #949494 !important;
                     .project-img{
-                        height: 45vh;
+                        height: 37vh;
                         overflow-y: scroll;
                         img{
                             width: 100%;
