@@ -667,6 +667,14 @@ $desktop-min: 1440px;
     }
 
     @include mobile{
+        .Contact{
+            .container{
+                .contact-right{
+                    padding: 3rem;
+                }
+            }
+        } 
+
         .custom-cursor{
             display: none;
         }
