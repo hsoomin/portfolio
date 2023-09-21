@@ -13,8 +13,8 @@ const About = () => {
                         <img src={process.env.PUBLIC_URL + '/img/1.jpg'} alt="" />
                     </div>
                     <div className='about-info'>
-                        <p>01012345678</p>
-                        <p>sdfsdfsdf@</p>
+                        <p>01029669281</p>
+                        <p>wnghkdsns@naver.com</p>
                         <p>hsoomin</p>
                     </div>
                 </div>

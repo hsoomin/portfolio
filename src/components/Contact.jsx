@@ -35,8 +35,8 @@ const Contact = () => {
                         <img src={process.env.PUBLIC_URL + '/img/hoverbg.png'} alt="" />
                     </div> */}
                     <div className='contact-info'>
-                        <p>Tel. 01012345678</p>
-                        <p>E-Mail. sdfsdfsdf@.com</p>
+                        <p>Tel. 010-2966-9281</p>
+                        <p>E-Mail. wnghkdsns@naver.com</p>
                         <p>Git. hsoomin</p>
                     </div>
                 </div>
