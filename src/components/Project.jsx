@@ -39,7 +39,7 @@ const Project = () => {
                 {ProjectData.map((project, index) => {
                     if (!Array.isArray(project.projectSkills)) {
                         console.error(`Project at index ${index} has no skills array.`);
-                        return null; // Return null or some default element
+                        return null; 
                     }
                     return (
                         <SwiperSlide key={index}>
@@ -48,14 +48,18 @@ const Project = () => {
                                     <img src={process.env.PUBLIC_URL + project.imgSrc} alt="" />
                                 </div>
                                 <div className="project-info">
-                                    <h3>{project.projectName}</h3>
-                                    <p>{project.projectDescript}</p>
                                     <div className='project-skills' >
                                     {project.projectSkills.map((skill, skillIndex) => (
                                         <img key={skillIndex} src={process.env.PUBLIC_URL + skill} alt="Skill" />
                                     ))}
                                     </div>
-                                    <Link to={project.projectLink} target="_blank" className="more-btn">자세히 보기</Link>
+                                    <h3>{project.projectName}</h3>
+                                    <p>{project.projectDescript}</p>
+                                    <p className='project-work'>작업 기여도: 100%</p>
+                                    <div className='project-btn'>
+                                        <Link to={project.projectCode} target="_blank">CODE</Link>
+                                        <Link to={project.projectLink} target="_blank">VIEW</Link>
+                                    </div>
                                 </div>
                             </div>
                         </SwiperSlide>

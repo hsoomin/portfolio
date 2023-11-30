@@ -29,7 +29,6 @@ $desktop-min: 1440px;
     }
 }
 
-
 .App{
     position: relative;
     //Header
@@ -79,22 +78,14 @@ $desktop-min: 1440px;
             height: 100%;
             .title{
                 flex-basis: 25%;
-                border-bottom: 1px solid #000;
-                line-height: 2;
+                line-height: 1.5;
                 h1{
                     font-size: 15rem;
-                }   
-            }
-            .year{
-                flex-basis: 25%;
-                border-bottom: 1px solid #000;
-                line-height: 1.5;
-                h2{
-                    font-size: 15rem;
+                    border-bottom: 1px solid #000;
                 }
             }
             .cover-arrow{
-                flex-basis: 50%;
+                flex-basis: 75%;
                 width: 100%;
                 border-right: 1px solid #000;
                 border-bottom: 1px solid #000;
@@ -102,8 +93,8 @@ $desktop-min: 1440px;
                     font-size: 32rem;
                     animation: arrowMove 1s infinite alternate ease-in-out;
                     position: absolute;
-                    bottom: -5rem;
-                    right: 2rem;
+                    bottom: 0;
+                    right: 3rem;
                     @keyframes arrowMove {
                         0% {transform: translateY(0);}
                         100% {transform: translateY(10px);}
@@ -128,97 +119,65 @@ $desktop-min: 1440px;
                 flex-basis: 30%;
                 flex-direction: column;
                 justify-content: center;
-                gap: 2rem;
-                padding: 5rem;
+                padding: 3rem;
                 box-sizing: border-box;
                 border-right: 1px solid #000;
-                .about-img{
+                img{
                     width: 100%;
-                    img{width: 100%;}
-                }
-                .about-info{
-                    text-align: right;
-                    border-bottom: 1px solid #000;
-                    p{
-                        font-size: 2.5rem;
-                    }
                 }
             }
             .about-right{
                 display: flex;
                 flex-direction: column;
                 flex-basis: 70%;
-                padding: 0 2rem;  
+                padding: 0 3rem;  
                 box-sizing: border-box;
                 position: relative;
-                .about-top{
-                    flex-basis: 20%;
-                    .about-title{
-                        font-size: 10rem;
-                        margin-top: 10rem;
-                        border-bottom: 1px solid #000;
-                    }
+                .about-title{
+                    font-size: 10rem;
+                    margin-top: 10rem;
+                    border-bottom: 1px solid #000;
                 }
-                .about-bottom{
-                    flex-basis: 80%;
+                .about-me{
+                    height: 100%;
                     display: flex;
-                    .about-explain{
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 3rem;
+                    box-sizing: border-box;
+                    gap: 2rem;
+                    .about-info{
+                        font-size: 5rem;
+                        font-weight: 600;
+                        border-bottom: 1px solid #000;
+                        text-align: right;
+                        span{
+                            font-size: 3rem;
+                        }
+                    }
+                    p{
+                        font-size: 3rem;
+                        border-bottom: 1px solid #000;
+                        text-align: right;
+                    }
+                    .about-skills{
                         display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 3rem;
+                        flex-wrap: wrap; 
+                        justify-content: flex-end;
+                        gap: .8rem 1rem;
+                        padding: 2rem 0;
                         box-sizing: border-box;
-                        p{
-                            font-size: 2rem;
+                        border-bottom: 1px solid #000;
+                        img{
+                            max-width: 25%; 
+                            &:hover{transform: scale(1.1);}
                         }
-                        &:nth-child(1){
-                            flex-basis: 40%;
-                            gap: 2rem;
-                            .explain{
-                                border-bottom: 1px solid #000;
-                            }
-                            .ex-top{}
-                            .ex-center{
-                                margin-top: 10rem;
-                            }
-                            .ex-bottom{}
+                        .bounce-img {
+                            &:hover {animation: bounceAnimation .3s infinite alternate;}
                         }
-                        &:nth-child(2){
-                            flex-basis: 60%;
-                            gap: 7rem;
-                            justify-content: center;
-                            .about-skill{
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                h3{
-                                    font-size: 2.5rem;
-                                    font-weight: 400;
-                                }
-                                .skills-img{
-                                    display: flex;
-                                    flex-wrap: wrap; 
-                                    justify-content: space-evenly;
-                                    gap: 0.3rem;
-                                    padding: .5rem 0;
-                                    box-sizing: border-box;
-                                    border-bottom: 1px solid #000;
-                                    img{
-                                        width: 13%; 
-                                        &:hover{transform: scale(1.1);}
-                                    }
-                                    .bounce-img {
-                                        &:hover {animation: bounceAnimation .3s infinite alternate;}
-                                    }
-                                    @keyframes bounceAnimation {
-                                        from {transform: translateY(0);}
-                                        to {transform: translateY(-10px);}
-                                    }
-                                }
-                            }
-                            .about-etc{
-                                border-bottom:1px solid#000 ;
-                            }
+                        @keyframes bounceAnimation {
+                            from {transform: translateY(0);}
+                            to {transform: translateY(-10px);}
                         }
                     }
                 }
@@ -244,7 +203,7 @@ $desktop-min: 1440px;
                 width: 100%;
                 display: flex;
                 align-items: center;
-                padding: 5.5rem 0;
+                padding: 5rem 0;
                 box-sizing: border-box;
                 .project-item{
                     display: flex;
@@ -265,18 +224,24 @@ $desktop-min: 1440px;
                     .project-info{
                         display: flex;
                         flex-direction: column;
-                        gap: 1rem;
+                        gap: 0.5rem;
+                        .project-skills{
+                            width: 100%;
+                            display: flex;
+                            gap: 1.5rem;
+                            justify-content: center;
+                            margin: 8px 0;
+                            img{width: 5rem;}
+                        }
                         h3{
                             font-size: 3rem;
                             text-align: center;
-                            padding: 1.5rem 0;
                             box-sizing: border-box;
                         }
                         p{
                             height: 7rem;
+                            color: #000;
                             font-size: 2rem;
-                            border-bottom: 1px solid #000;
-                            padding-bottom: 1rem;
                             box-sizing: border-box;
                             text-align: center;
                             word-break: keep-all;
@@ -284,26 +249,30 @@ $desktop-min: 1440px;
                             justify-content: center;
                             align-items: center;
                         }
-                        .project-skills{
-                            width: 100%;
-                            display: flex;
-                            gap: 1.5rem;
-                            justify-content: center;
-                            margin: 8px 0;
-                            img{width: 4rem;}
+                        .project-work{
+                            font-size: 2.2rem;
+                            font-weight: 600;
                         }
-                        .more-btn{
-                            font-size: 2rem;
-                            background: transparent;
-                            color: #000;
-                            text-align: center;
-                            padding: 1rem;
-                            border: 1px solid #000;
-                            box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-                            &:hover{
-                                background: #47DA5C;
-                                color: #fff;
-                                border: none;
+                        .project-btn{
+                            display: flex;
+                            justify-content: center;
+                            a{
+                                width: 100%;
+                                font-size: 2rem;
+                                background: transparent;
+                                color: #000;
+                                text-align: center;
+                                padding: 1rem 2rem;
+                                border: 1px solid #000;
+                                box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+                                &:first-child{
+                                    margin-right: 0.5rem;
+                                }
+                                &:hover{
+                                    background: #47DA5C;
+                                    color: #fff;
+                                    border: none;
+                                }
                             }
                         }
                     }
@@ -341,26 +310,9 @@ $desktop-min: 1440px;
                         height: 100%;
                     }
                 }
-                // .hover{
-                //     position: absolute;
-                //     top: 21%;  //위치 수정하기
-                //     left: 45%;
-                //     opacity: 0;
-                //     img{
-                //         animation: spin 20s infinite linear;
-                //     }
-                    
-                //     @keyframes spin {
-                //         from {transform: rotate(0deg);}
-                //         to {transform: rotate(360deg);}
-                //     }
-                // }
-                // .contact-qr:hover + .hover {
-                //     opacity: 1;
-                // }
                 .contact-info{
                     text-align: center;
-                    p{font-size: 1.7rem;}
+                    p{font-size: 2rem;}
                 }
             }
             .contact-right{
@@ -467,13 +419,6 @@ $desktop-min: 1440px;
     }
 
     @include tablet{
-        .Cover{
-            .cover-container{
-                .year{
-                    line-height: 2;
-                }
-            }
-        } 
         .Header{
             ul{
                 gap: 2rem;
@@ -485,10 +430,21 @@ $desktop-min: 1440px;
                     padding: 2rem;
                 }
                 .about-right{
-                    .about-top{
-                        .about-title{
-                            font-size: 15rem;
-                            margin-top: 12rem;
+                    .about-me{
+                        padding: 2rem;
+                        .about-info{
+                            font-size: 4rem;
+                            span{
+                                font-size: 3rem;
+                            }
+                        }
+                        p{
+                            font-size: 3rem;
+                        }
+                        .about-skills{
+                            img{
+                                max-width: 11%;
+                            }
                         }
                     }
                 }
@@ -498,7 +454,6 @@ $desktop-min: 1440px;
             .container{
                 .mySwiper{
                     padding-top: 10rem;
-                    box-sizing: border-box;
                 }
             }
         } 
@@ -560,18 +515,10 @@ $desktop-min: 1440px;
                         line-height: 2;
                     }   
                 }
-                .year{
-                    flex-basis: 0;
-                    h2{
-                        font-size: 12rem;
-                        line-height: 2;
-                    }
-                }
                 .cover-arrow{
-                    flex-basis: 150px;
+                    flex-basis: 55rem; //???
                     .arrow-down{
                         font-size: 24rem;
-                        bottom: 0;
                     }
                 }
             }
@@ -580,31 +527,22 @@ $desktop-min: 1440px;
             height: 100%;
             margin-top: 15rem;
             .container{
-                padding: 3rem;
+                padding: 3rem; 
+                flex-direction: column-reverse;
                 .about-left{
                     padding: 3rem;
+                    border-right: none;
+                    align-items: center;
+                    img{
+                        width: 50%;
+                    }
                 }
                 .about-right{
-                    .about-top{
-                        .about-title{
-                            font-size: 10rem;
-                            margin-top: 0;
-                        }
-                    }
-                    .about-bottom{
-                        flex-basis: 80%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5rem;
-                        .about-explain{
-                            &:nth-child(2){
-                                .about-skill{
-                                    .skills-img{
-                                        img{
-                                            width: 6%; 
-                                        }
-                                    }
-                                }
+                    padding: 3rem;  
+                    .about-me{
+                        .about-skills{
+                            img{
+                                max-width: 11%; 
                             }
                         }
                     }
@@ -613,34 +551,33 @@ $desktop-min: 1440px;
         }
         .Project{
             height: 100%;
+            margin-top: 15rem;
             .container{
                 padding: 3rem;
                 .mySwiper{
                     padding-top: 15rem;
                     .project-item{
                         .project-info{
-                            gap: 2rem;
+                            .project-skills{
+                                img{width: 10rem;}
+                            }
                             h3{
-                                padding: 3rem 0;
+                                font-size: 3rem;
                             }
                             p{
-                                padding-bottom: 1rem;
-                                font-size: 1rem;
+                                font-size: 2.5rem;
                             }
-                            .project-skills{
-                                justify-content: center;
-                                align-items: center;
-                                gap: 1rem;
-                                img{width: 5rem;}
-                            }
-                            .more-btn{
-                                padding: 1rem;
+                            .project-btn{
+                                a{
+                                    font-weight: 600;
+                                    
+                                }
                             }
                         }
                     }
                 }
             }
-        } 
+        }    
         .Contact{
             height: 100%;
             margin-top: 12rem;
@@ -668,6 +605,12 @@ $desktop-min: 1440px;
                 }
             }
         } 
+        .custom-cursor{
+            display: none;
+        }
+        .circle{
+            display: none;
+        }
     }
 
     @include mobile{
@@ -678,13 +621,6 @@ $desktop-min: 1440px;
                 }
             }
         } 
-
-        .custom-cursor{
-            display: none;
-        }
-        .circle{
-            display: none;
-        }
         .QuickButton{
             right: 2%;
             .quick_top{
@@ -727,51 +663,36 @@ $desktop-min: 1440px;
     //Cover
     .Cover{
         .cover-container{
-            border-bottom: 1px solid #949494 !important;
             .title{
+                h1{
+                    border-bottom: 1px solid #949494 !important;
+                }
+            }
+            .cover-arrow{
+                border-right: 1px solid#949494 !important;
                 border-bottom: 1px solid #949494 !important;
             }
-            .year{
-                border-bottom: 1px solid #949494 !important;
-            }
-        }
-        .cover-arrow{
-            border-right: 1px solid #949494 !important;
-            
         }
     } 
     //about
     .About{
         .container{
             .about-left{
-                border-right:  1px solid #949494 !important;
-                .about-info{
-                    border-bottom:  1px solid #949494 !important;
-                }
+                border-right: 1px solid#949494 !important;
             }
             .about-right{
-                .about-top{
-                    .about-title{
-                        border-bottom: 1px solid #949494 !important;
-                    }
+                .about-title{
+                    border-bottom: 1px solid#949494 !important;
                 }
-                .about-bottom{
-                    .about-explain{
-                        &:nth-child(1){
-                            .explain{
-                                border-bottom: 1px solid #949494 !important;
-                            }
-                        }
-                        &:nth-child(2){
-                            .about-skill{
-                                .skills-img{
-                                    border-bottom: 1px solid #949494 !important;
-                                }
-                            }
-                            .about-etc{
-                                border-bottom: 1px solid #949494 !important;
-                            }
-                        }
+                .about-me{
+                    .about-info{
+                        border-bottom: 1px solid#949494 !important;
+                    }
+                    p{
+                        border-bottom: 1px solid#949494 !important;
+                    }
+                    .about-skills{
+                        border-bottom: 1px solid#949494 !important;
                     }
                 }
             }
@@ -781,41 +702,36 @@ $desktop-min: 1440px;
     .Project{
         .container{
             .title{
-                border-bottom: 1px solid #949494 !important;
                 border-top: 1px solid #949494 !important;
+                border-bottom: 1px solid #949494 !important;
             }
             .mySwiper{
                 .project-item{
                     border-right: 1px solid #949494 !important;
-                    .project-img{
-                        height: 37vh;
-                        overflow-y: scroll;
-                        img{
-                            width: 100%;
-                        }
-                    }
                     ::-webkit-scrollbar-thumb{background:#8ab4f8 !important;}
                     ::-webkit-scrollbar-track{background: #282c34 !important}
                     .project-info{
                         p{
-                            height: 7rem;
                             color: #fff;
                             border-bottom: 1px solid #949494 !important;
                         }
-                        .more-btn{
-                            border: 1px solid #949494 !important;
-                            color: #fff;
-                            &:hover{
-                                background:  #8ab4f8;
+                        .project-btn{
+                            a{
                                 color: #fff;
-                                border: none !important;
+                                border: 1px solid #949494 !important;
+                                box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+                                &:hover{
+                                    background:  #8ab4f8;
+                                    color: #fff;
+                                    border: none !important ;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }    
+    } 
     //contact
     .Contact{
         .container{

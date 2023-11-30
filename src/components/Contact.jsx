@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { Link } from 'react-scroll';
 import Typewriter from 'typewriter-effect';
 import FlowText from './FlowText';
 
@@ -31,9 +30,6 @@ const Contact = () => {
                     <div className="contact-qr">
                         <img src={process.env.PUBLIC_URL + '/img/QR.png'} alt="" />
                     </div>
-                    {/* <div className="hover">
-                        <img src={process.env.PUBLIC_URL + '/img/hoverbg.png'} alt="" />
-                    </div> */}
                     <div className='contact-info'>
                         <p>Tel. 010-2966-9281</p>
                         <p>E-Mail. wnghkdsns@naver.com</p>
@@ -55,7 +51,7 @@ const Contact = () => {
                                 id="email"
                                 type="email" 
                                 name="email"
-                                placeholder="보내시는 분 email 주소" 
+                                placeholder="e-mail" 
                             />
                             {/* Email에 대한 오류 메시지 표시 */}
                             <ValidationError 
@@ -66,7 +62,7 @@ const Contact = () => {
                             <textarea
                                 id="message"
                                 name="message"
-                                placeholder="message" 
+                                placeholder="내용을 입력해주세요." 
                             />
                             <ValidationError 
                                 prefix="Message" 
@@ -86,5 +82,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-

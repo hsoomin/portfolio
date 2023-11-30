@@ -6,8 +6,6 @@ import { Route , Routes } from 'react-router-dom';
 import CustomCursor from './components/CustomCursor';
 import FollowCursor from './components/FollowCursor';
 import QuickButton from './components/QuickButton';
-// import Scroll100vh from './components/Scroll100vh';
-// import AnimatedCursor from "react-animated-cursor"
 
 function App() {
 
@@ -16,7 +14,6 @@ function App() {
     const handleToggleMode = () => {
         setIsDarkMode(!isDarkMode);
     };
-
 
     return (
         <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
@@ -32,5 +29,3 @@ function App() {
 }
 
 export default App;
-
-

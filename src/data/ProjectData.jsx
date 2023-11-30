@@ -4,7 +4,8 @@ const ProjectData = [
         imgSrc: '/img/pro06.png',
         projectName: 'NEXT SHOPPING',
         projectLink: 'https://next-shop-beige-ten.vercel.app/',
-        projectDescript: 'Next.js를 이용한 가상의 쇼핑몰',
+        projectCode: 'https://github.com/hsoomin/next_shop',
+        projectDescript: 'mongoDB를 활용하여 회원가입, 장바구니, 공지사항의 기능을 적용했습니다. ',
         projectSkills: ['/img/skills/NextJS-Light.svg','/img/skills/Sass.svg']
     },
     {
@@ -12,7 +13,8 @@ const ProjectData = [
         imgSrc: '/img/pro05.png',
         projectName: 'MOVIE LIST',
         projectLink: 'https://hsoomin.github.io/react_movieList/',
-        projectDescript: 'TMDB API를 사용한 영화 검색 사이트',
+        projectCode: 'https://github.com/hsoomin/react_movieList',
+        projectDescript: 'TMDB API를 사용하여 영화 검색이 가능하며, 관련 정보를 볼 수 있도록 구현했습니다.',
         projectSkills: ['/img/skills/React-Dark.svg','/img/skills/Sass.svg']
     },
     {
@@ -20,7 +22,8 @@ const ProjectData = [
         imgSrc: '/img/pro04.png',
         projectName: 'GOODS SHOP',
         projectLink: 'https://goods-shop-lemon.vercel.app/',
-        projectDescript: 'React와 Node.js 이용한 가상의 소품샵 웹사이트를 제작하여 Vercel로 배포',
+        projectCode: 'https://github.com/hsoomin/goodsShop',
+        projectDescript: 'Node.js를 활용하여 상품 업로드 기능을 구현하였고, Vercel을 이용하여 배포했습니다.',
         projectSkills: ['/img/skills/React-Dark.svg','/img/skills/Sass.svg','/img/skills/NodeJS-Dark.svg']
     },
     {
@@ -28,7 +31,8 @@ const ProjectData = [
         imgSrc: '/img/pro03.png',
         projectName: '감정 일기장',
         projectLink: 'https://react-project-a617c.web.app/',
-        projectDescript: 'Local Storage를 활용하여 데이터 추가, 수정, 삭제가 가능하며 firebase를 이용하여 배포',
+        projectCode: 'https://github.com/hsoomin/react_emotion_diary',
+        projectDescript: 'Local Storage를 활용하여 데이터 추가, 수정, 삭제가 가능하며 firebase를 이용하여 배포했습니다.',
         projectSkills: ['/img/skills/React-Dark.svg','/img/skills/Sass.svg']
     },
     {
@@ -36,7 +40,8 @@ const ProjectData = [
         imgSrc: '/img/pro02.png',
         projectName: '설빙',
         projectLink: 'https://hsoomin.github.io/Sulbing/',
-        projectDescript: '기존의 설빙 웹사이트를 반응형으로 리디자인',
+        projectCode: 'https://github.com/hsoomin/Sulbing',
+        projectDescript: '기존의 설빙 웹사이트를 반응형으로 리디자인했습니다.',
         projectSkills: ['/img/skills/HTML.svg','/img/skills/CSS.svg','/img/skills/JavaScript.svg']
     },
     {
@@ -44,8 +49,9 @@ const ProjectData = [
         imgSrc: '/img/pro01.png',
         projectName: '국립중앙박물관',
         projectLink: 'https://hsoomin.github.io/National_Museum_of_Korea/',
-        projectDescript: '처음 HTML과 CSS를 배우며 국립중앙박물관의 메인페이지 및 서브페이지를 클론 코딩',
-        projectSkills: ['/img/skills/HTML.svg','/img/skills/CSS.svg','/img/skills/JavaScript.svg'],
+        projectCode: 'https://github.com/hsoomin/National_Museum_of_Korea',
+        projectDescript: '처음 HTML과 CSS를 배우며 국립중앙박물관의 메인페이지 및 서브페이지를 클론 코딩했습니다.',
+        projectSkills: ['/img/skills/HTML.svg','/img/skills/CSS.svg','/img/skills/JavaScript.svg','/img/skills/JQuery.svg'],
     }
 ];
 

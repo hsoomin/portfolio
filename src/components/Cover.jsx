@@ -14,10 +14,8 @@ const Cover = () => {
         <div className='Cover' id='section1'>
             <div className='cover-container'>
                 <div className="title">
-                    <h1 className="animate__animated animate__fadeInDownBig">PORTFOLIO</h1>
-                </div>
-                <div className="year">
-                    <h2 className="animate__animated animate__fadeInDownBig animate__delay-1s">2023</h2>
+                    <h1 className="animate__animated animate__fadeInDownBig">SOOMIN</h1>
+                    <h1 className="animate__animated animate__fadeInDownBig animate__delay-1s">PORTFOLIO</h1>
                 </div>
                 <div className='cover-arrow'>
                     <div className="arrow-down" onClick={scrollToNextSection}>
