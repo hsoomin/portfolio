@@ -79,9 +79,9 @@ $desktop-min: 1440px;
             .title{
                 flex-basis: 25%;
                 line-height: 1.5;
+                border-bottom: 1px solid #000;
                 h1{
                     font-size: 15rem;
-                    border-bottom: 1px solid #000;
                 }
             }
             .cover-arrow{
@@ -169,7 +169,7 @@ $desktop-min: 1440px;
                         box-sizing: border-box;
                         border-bottom: 1px solid #000;
                         img{
-                            max-width: 25%; 
+                            width: 11%; 
                             &:hover{transform: scale(1.1);}
                         }
                         .bounce-img {
@@ -383,22 +383,22 @@ $desktop-min: 1440px;
         }
     }  
     //cursor
-    .custom-cursor{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background: #47DA5C;
-        position: fixed;
-        z-index: 999;
-    }
-    .circle{
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #47DA5C;
-        position: fixed;
-        z-index: 998;
-    }
+    // .custom-cursor{
+    //     width: 30px;
+    //     height: 30px;
+    //     border-radius: 50%;
+    //     background: #47DA5C;
+    //     position: fixed;
+    //     z-index: 999;
+    // }
+    // .circle{
+    //     width: 10px;
+    //     height: 10px;
+    //     border-radius: 50%;
+    //     background: #47DA5C;
+    //     position: fixed;
+    //     z-index: 998;
+    // }
     .QuickButton{
         position: fixed;
         bottom: 5%;
@@ -440,11 +440,6 @@ $desktop-min: 1440px;
                         }
                         p{
                             font-size: 3rem;
-                        }
-                        .about-skills{
-                            img{
-                                max-width: 11%;
-                            }
                         }
                     }
                 }
@@ -502,6 +497,12 @@ $desktop-min: 1440px;
                 }
             }
         } 
+        // .custom-cursor{
+        //     display: none;
+        // }
+        // .circle{
+        //     display: none;
+        // }
     } 
 
     @include phone{
@@ -516,7 +517,7 @@ $desktop-min: 1440px;
                     }   
                 }
                 .cover-arrow{
-                    flex-basis: 55rem; //???
+                    flex-basis: 55rem; 
                     .arrow-down{
                         font-size: 24rem;
                     }
@@ -525,12 +526,9 @@ $desktop-min: 1440px;
         } 
         .About{
             height: 100%;
-            margin-top: 15rem;
             .container{
-                padding: 3rem; 
                 flex-direction: column-reverse;
                 .about-left{
-                    padding: 3rem;
                     border-right: none;
                     align-items: center;
                     img{
@@ -538,20 +536,12 @@ $desktop-min: 1440px;
                     }
                 }
                 .about-right{
-                    padding: 3rem;  
-                    .about-me{
-                        .about-skills{
-                            img{
-                                max-width: 11%; 
-                            }
-                        }
-                    }
+                    padding: 0;  
                 }
             }
         }
         .Project{
             height: 100%;
-            margin-top: 15rem;
             .container{
                 padding: 3rem;
                 .mySwiper{
@@ -580,13 +570,12 @@ $desktop-min: 1440px;
         }    
         .Contact{
             height: 100%;
-            margin-top: 12rem;
             margin-bottom: 5rem;
             .container{
                 height: 100%;
                 padding: 3rem 3rem 5rem 3rem;;
                 flex-direction: column;
-                gap: 7rem;
+                gap: 5rem;
                 .contact-left{
                     flex-basis: 0;
                     gap: 5rem;
@@ -605,12 +594,6 @@ $desktop-min: 1440px;
                 }
             }
         } 
-        .custom-cursor{
-            display: none;
-        }
-        .circle{
-            display: none;
-        }
     }
 
     @include mobile{
@@ -758,13 +741,13 @@ $desktop-min: 1440px;
             }
         }
     }    
-    //cursor
-    .custom-cursor{
-        background: #8ab4f8 !important; 
-    }
-    .circle{
-        background: #8ab4f8 !important; 
-    }
+    // //cursor
+    // .custom-cursor{
+    //     background: #8ab4f8 !important; 
+    // }
+    // .circle{
+    //     background: #8ab4f8 !important; 
+    // }
     //QuickButton
     .QuickButton{
         .quick_top{

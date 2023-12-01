@@ -3,8 +3,8 @@ import './App.scss';
 import Header from './components/Header';
 import Main from './components/Main';
 import { Route , Routes } from 'react-router-dom';
-import CustomCursor from './components/CustomCursor';
-import FollowCursor from './components/FollowCursor';
+// import CustomCursor from './components/CustomCursor';
+// import FollowCursor from './components/FollowCursor';
 import QuickButton from './components/QuickButton';
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
     return (
         <div className={`App ${isDarkMode ? 'dark' : 'light'}`}>
             <Header onToggleMode={handleToggleMode} isDarkMode={isDarkMode}/>
-            <CustomCursor />
-            <FollowCursor />
+            {/* <CustomCursor /> */}
+            {/* <FollowCursor /> */}
             <QuickButton />
             <Routes>
                 <Route path='/' element={<Main/>}/>
