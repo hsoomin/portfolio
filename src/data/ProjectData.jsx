@@ -1,13 +1,13 @@
 const ProjectData = [
-    {
-        id:1,
-        imgSrc: '/img/pro06.png',
-        projectName: 'NEXT SHOPPING',
-        projectLink: 'https://next-shop-beige-ten.vercel.app/',
-        projectCode: 'https://github.com/hsoomin/next_shop',
-        projectDescript: 'mongoDB를 활용하여 회원가입, 장바구니, 공지사항의 기능을 적용했습니다. ',
-        projectSkills: ['/img/skills/NextJS-Light.svg','/img/skills/Sass.svg']
-    },
+    // {
+    //     id:1,
+    //     imgSrc: '/img/pro06.png',
+    //     projectName: 'NEXT SHOPPING',
+    //     projectLink: 'https://next-shop-beige-ten.vercel.app/',
+    //     projectCode: 'https://github.com/hsoomin/next_shop',
+    //     projectDescript: 'mongoDB를 활용하여 회원가입, 장바구니, 공지사항의 기능을 적용했습니다. ',
+    //     projectSkills: ['/img/skills/NextJS-Light.svg','/img/skills/Sass.svg']
+    // },
     {
         id:2,
         imgSrc: '/img/pro05.png',
